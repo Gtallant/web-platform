@@ -1,0 +1,8 @@
+{
+  "name": "griffelse_web",
+  "version": "1.0.0",
+  "description": "generic web platform",
+  "main": "index.js",
+  "author": "Griffin Tallant",
+  "license": "MIT"
+}

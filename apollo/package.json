@@ -1,0 +1,27 @@
+{
+  "name": "griffelse_web_apollo",
+  "version": "1.0.0",
+  "description": "server that coodinates between all the pieces of the platform",
+  "scripts": {
+    "dev": "SET NODE_ENV=develop && nodemon --exec babel-node index.js --source-maps",
+    "clean:npm": "rmdir node_modules /s /q",
+    "clean:build": "rmdir dist /s /q",
+    "clean": "npm run clean:npm & npm run clean:build"
+  },
+  "author": "Griffin Tallant",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.14.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "graphql": "^15.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "nodemon": "^2.0.4"
+  }
+}
