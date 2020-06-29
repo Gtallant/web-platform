@@ -13,6 +13,6 @@ function Headline({ level, children}) {
     } else if (level === 5) {
         return (<S.h5>{children}</S.h5>);
     }
-    return (<h6>{children}</h6>);
+    return (<S.h6>{children}</S.h6>);
 }
 export default Headline;
