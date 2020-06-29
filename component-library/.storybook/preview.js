@@ -1,5 +1,5 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import ThemeProvider from '../src/molecules/themeProvider/themeProvider';
+import StoryContainer from './../src/utils/storyContainer/storyContainer';
 
-addDecorator(storyFn => <ThemeProvider>{storyFn()}</ThemeProvider>);
+addDecorator(storyFn => <StoryContainer>{storyFn()}</StoryContainer>);
