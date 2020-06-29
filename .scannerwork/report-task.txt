@@ -1,0 +1,7 @@
+organization=gtallant
+projectKey=Gtallant_web-platform
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.9133
+dashboardUrl=https://sonarcloud.io/dashboard?id=Gtallant_web-platform
+ceTaskId=AXMCErehmvlDwP82LUN1
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXMCErehmvlDwP82LUN1

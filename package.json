@@ -4,5 +4,11 @@
   "description": "generic web platform",
   "main": "index.js",
   "author": "Griffin Tallant",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "sonar-scanner -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.login=66f50c90d46a2a24d96855f0ca11e3af9b6666d8 -Dsonar.projectKey=Gtallant_web-platform -Dsonar.organization=gtallant"
+  },
+  "dependencies": {
+    "sonar-scanner": "^3.1.0"
+  }
 }
