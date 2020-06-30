@@ -1,12 +1,13 @@
 import React from 'react';
+import { withKnobs, text as textKnob } from "@storybook/addon-knobs";
 import Button from './button';
-import faker from 'faker';
 
 export default {
   component: Button,
-  title: 'Atoms/Button',
+  title: 'Atoms | Button',
+  decorators: [withKnobs],
 };
 
-export const contained = () => (<Button>{faker.lorem.words(2)}</Button>);
-export const outline = () => (<Button variant="outline">{faker.lorem.words(2)}</Button>);
-export const text = () => (<Button variant="text">{faker.lorem.words(2)}</Button>);
+export const contained = () => (<Button>{textKnob("Button Text", "Click Me")}</Button>);
+export const outline = () => (<Button variant="outline">{textKnob("Button Text", "Click Me")}</Button>);
+export const text = () => (<Button variant="text">{textKnob("Button Text", "Click Me")}</Button>);
