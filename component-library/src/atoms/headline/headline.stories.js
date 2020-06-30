@@ -3,7 +3,7 @@ import Headline from './headline';
 
 export default {
   component: Headline,
-  title: 'Atoms/Headline',
+  title: 'Atoms | Headline',
 };
 
 export const level_one = () => (<Headline level={1}>Hello World!</Headline>);

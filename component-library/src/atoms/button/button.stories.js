@@ -4,7 +4,7 @@ import faker from 'faker';
 
 export default {
   component: Button,
-  title: 'Atoms/Button',
+  title: 'Atoms | Button',
 };
 
 export const contained = () => (<Button>{faker.lorem.words(2)}</Button>);

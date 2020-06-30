@@ -4,7 +4,7 @@ import faker from 'faker';
 
 export default {
   component: Body,
-  title: 'Atoms/Body',
+  title: 'Atoms | Body',
 };
 
 export const level_one = () => (<Body level={1}>{faker.lorem.paragraph(5)}</Body>);
