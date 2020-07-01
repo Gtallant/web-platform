@@ -8,4 +8,5 @@ export default styled.div`
   height: calc(100vh - 32px);
   width: calc(100vw - 64px);
   padding: 16px 32px;
+  background: ${props => props.theme.colors.background}
 `;
