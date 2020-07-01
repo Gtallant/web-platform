@@ -4,11 +4,11 @@ import S from './storyContainer.style';
 
 function StoryContainer({children}) {
   return (
-    <S>
-      <ThemeProvider>
+    <ThemeProvider>
+      <S>
         {children}
-      </ThemeProvider>
-    </S>
+      </S>
+    </ThemeProvider>
   );
 }
 export default StoryContainer;
