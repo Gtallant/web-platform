@@ -19,6 +19,7 @@ function createShadow(elevation) {
 
 export default styled.div`
   position: relative;
+  z-index: ${props => props.elevation};
   background: ${props => props.theme.colors.surface};
   opacity: .25;
   ${props => createShadow(props.elevation)}
