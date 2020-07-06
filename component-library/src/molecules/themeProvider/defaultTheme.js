@@ -13,5 +13,39 @@ export default {
         on_background: '#000000',
         on_surface: '#000000',
         on_error: '#ffffff',
-    }
+    },
+    breakpoints: [
+      {
+        min: 0,
+        max: 599,
+        numCol: 4,
+        marginSize: 16,
+        gutterSize: 16,
+        maxContentWidth: 599,
+      },
+      {
+        min: 600,
+        max: 719,
+        numCol: 8,
+        marginSize: 16,
+        gutterSize: 16,
+        maxContentWidth: 719,
+      },
+      {
+        min: 720,
+        max: 839,
+        numCol: 8,
+        marginSize: 24,
+        gutterSize: 24,
+        maxContentWidth: 839,
+      },
+      {
+        min: 840,
+        max: 1440,
+        numCol: 8,
+        marginSize: 24,
+        gutterSize: 24,
+        maxContentWidth: 1440,
+      },
+    ]
 };

@@ -4,7 +4,7 @@ import Icon from './icon';
 
 export default {
   component: Icon,
-  title: 'Atoms | Icon',
+  title: 'Atoms/Icon',
   decorators: [withKnobs]
 };
 

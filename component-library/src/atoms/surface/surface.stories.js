@@ -5,7 +5,7 @@ import Surface from './surface';
 
 export default {
   component: Surface,
-  title: 'Atoms | Surface',
+  title: 'Atoms/Surface',
   decorators: [withKnobs]
 };
 
