@@ -4,7 +4,7 @@ import Headline from './headline';
 
 export default {
   component: Headline,
-  title: 'Atoms | Headline',
+  title: 'Atoms/Headline',
   decorators: [withKnobs],
 };
 
