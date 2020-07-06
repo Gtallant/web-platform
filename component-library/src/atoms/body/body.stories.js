@@ -5,7 +5,7 @@ import faker from 'faker';
 
 export default {
   component: Body,
-  title: 'Atoms | Body',
+  title: 'Atoms/Body',
   decorators: [withKnobs],
 };
 
