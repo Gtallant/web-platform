@@ -47,5 +47,9 @@ export default {
         gutterSize: 24,
         maxContentWidth: 1440,
       },
-    ]
+    ],
+    cardProperties: {
+      corner: 4,
+      padding: gutterSize => Math.max(gutterSize * .75, 8),
+    }
 };
