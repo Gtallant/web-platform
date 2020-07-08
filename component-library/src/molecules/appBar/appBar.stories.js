@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, select, number, color } from "@storybook/addon-knobs";
+import { withKnobs, select, color } from "@storybook/addon-knobs";
 import AppBar from './appBar';
 import defaultTheme from '../themeProvider/defaultTheme';
 import Headline from './../../atoms/headline/headline';
