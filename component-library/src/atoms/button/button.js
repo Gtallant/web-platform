@@ -1,27 +1,58 @@
 import React from 'react';
 import S from './button.style';
+import { PropTypes } from 'prop-types';
+import { withTheme } from 'styled-components';
+import Icon from '../icon/icon';
 
-function Button({ variant, children}) {
+function Button({ variant, elevation, icon, scale, theme, className, children}) {
     if (variant === 'text') {
         return (
-            <S.text role="button">
+            <S.text className={`${className} button`} elevation={elevation} role="button">
                 <S.background className='bkgd' />
                 {children}
             </S.text>
         );
     } else if (variant === 'outline') {
         return (
-            <S.outline role="button">
+            <S.outline className={`${className} button`} elevation={elevation} role="button">
                 <S.background className='bkgd' />
                 {children}
             </S.outline>
         );
     }
+    if (icon) {
+      return (
+        <S.contained className={`${className} button`} elevation={elevation} diameter={scale} role="button">
+            <S.background elevation={elevation} className='bkgd' />
+            <S.contents elevation={elevation} diameter={scale} className='contents'>
+              <Icon name={icon} scale={scale*.5} color={theme.colors.on_primary} />
+            </S.contents>
+        </S.contained>
+      );
+    }
     return (
-        <S.contained role="button">
-            <S.background className='bkgd' />
-            {children}
+        <S.contained className={`${className} button`} elevation={elevation} role="button">
+            <S.background elevation={elevation} className='bkgd' />
+            <S.contents elevation={elevation} className='contents'>
+              {children}
+            </S.contents>
         </S.contained>
     );
 }
-export default Button;
+
+Button.propTypes = {
+  elevation: PropTypes.number,
+  variant: PropTypes.string,
+  children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+  ]),
+};
+
+Button.defaultProps = {
+  elevation: 0,
+  variant: 'contained',
+  children: null,
+};
+
+export default withTheme(Button);

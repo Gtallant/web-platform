@@ -1,5 +1,12 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
-import ThemeProvider from '../src/molecules/themeProvider/themeProvider';
+import StoryContainer from './../src/utils/storyContainer/storyContainer';
+import { addParameters } from '@storybook/react';
 
-addDecorator(storyFn => <ThemeProvider>{storyFn()}</ThemeProvider>);
+addParameters({
+  options: {
+    showRoots: true,
+  },
+});
+
+addDecorator(storyFn => <StoryContainer>{storyFn()}</StoryContainer>);
