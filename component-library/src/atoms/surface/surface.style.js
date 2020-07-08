@@ -5,7 +5,7 @@ export default styled.div`
   position: relative;
   width: 100%;
   z-index: ${props => props.elevation};
-  background: ${props => props.theme.colors.surface};
-  opacity: .25;
+  background: ${props => props.color ? props.color : props.theme.colors.surface};
+  opacity: 1;
   ${props => createShadow(props.elevation)}
 `;

@@ -31,7 +31,7 @@ export const basic = () => {
     return (
       <Column key={ele}>
         <Surface>
-          <Content height={number("Height", 100)} />
+          <Content height={number("Height", 100)}>&nbsp;</Content>
         </Surface>
       </Column>
     );

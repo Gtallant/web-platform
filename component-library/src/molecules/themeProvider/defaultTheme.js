@@ -22,6 +22,10 @@ export default {
         marginSize: 16,
         gutterSize: 16,
         maxContentWidth: 599,
+        appBar: {
+          height: 40,
+          content: 30,
+        },
       },
       {
         min: 600,
@@ -30,6 +34,10 @@ export default {
         marginSize: 16,
         gutterSize: 16,
         maxContentWidth: 719,
+        appBar: {
+          height: 60,
+          content: 50,
+        },
       },
       {
         min: 720,
@@ -38,6 +46,10 @@ export default {
         marginSize: 24,
         gutterSize: 24,
         maxContentWidth: 839,
+        appBar: {
+          height: 60,
+          content: 45,
+        },
       },
       {
         min: 840,
@@ -46,6 +58,10 @@ export default {
         marginSize: 24,
         gutterSize: 24,
         maxContentWidth: 1440,
+        appBar: {
+          height: 60,
+          content: 40,
+        },
       },
     ],
     cardProperties: {

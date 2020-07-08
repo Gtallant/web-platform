@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import S from './column.style';
 
-function Column({width, align, children}) {
+function Column({width, align, className, children}) {
   console.log(align);
   return (
-    <S width={width} align={align}>
+    <S className={`${className} column ${align ? `column--${align}` : ''}`} width={width} align={align}>
       {children}
     </S>
   );
@@ -17,7 +17,7 @@ Column.propTypes = {
 };
 
 Column.defaultProps = {
-  width: 1
+  width: 'grow'
 };
 
 export default Column;
