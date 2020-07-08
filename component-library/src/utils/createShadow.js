@@ -8,7 +8,7 @@ export default function createShadow(elevation, { hOffset, vOffset, amplitude, b
   for (let i = 1; i < numLevels; i++) {
     const e = i * amplitude;
     shadowCSS = `${shadowCSS},
-    ${hOffset} ${e + vOffset}px ${Math.abs(amplitude*e + blurOffset)}px rgba(0, 0, 0, ${Math.min(maxOpacity, 1 - i/numLevels)})
+    ${hOffset} ${e + vOffset}px ${Math.abs(amplitude*e + blurOffset)}px rgba(0, 0, 0, ${.25*(Math.min(maxOpacity, 1 - i/numLevels))})
     `;
   }
   return `${shadowCSS};`;

@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const container = styled.div`
+  display: block;
   position: relative;
+  max-width: 100vw;
   width: 100%;
   ${props => {
     const breakpoints = props.theme.breakpoints;
@@ -32,14 +34,15 @@ const contents = styled.div`
       bp = breakpoints[i];
       styles = `${styles}
         @media (max-width: ${bp.max}px) { 
-          max-width: ${bp.maxContentWidth}px;
+          ${props.fullbleed ? `` : `max-width: ${bp.maxContentWidth}px;`}
+          ${props.fullbleed ? `margin: auto ${bp.marginSize}px;` : ''}
         }
       `;
     }
     bp = breakpoints[breakpoints.length - 1];
     styles = `${styles}
       @media (min-width: ${bp.max + 1}px) { 
-        max-width: ${bp.maxContentWidth}px;
+        ${props.fullbleed ? '' : `max-width: ${bp.maxContentWidth}px;`}
       }
     `;
     return styles;
