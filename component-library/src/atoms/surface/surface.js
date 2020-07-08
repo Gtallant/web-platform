@@ -12,13 +12,13 @@ function Surface({elevation, themeOverride, className, children}) {
   }
   if (themeOverride) {
     return (
-      <S className={className} theme={overrideTheme}>
+      <S className={`${className} surface`} theme={overrideTheme}>
         {children}
       </S>
     );
   }
   return (
-    <S className={className} elevation={elevation}>
+    <S className={`${className} surface`} elevation={elevation}>
       {children}
     </S>
   );

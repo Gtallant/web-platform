@@ -4,9 +4,9 @@ import I from './icon.style';
 import { PropTypes } from 'prop-types';
 import { withTheme } from 'styled-components';
 
-function Icon({name, scale, color, theme}) {
+function Icon({name, scale, color, className, theme}) {
   return (
-    <I color={color} scale={scale}>
+    <I className={`${className} icon`} color={color} scale={scale}>
       {ICON_LIBRARY[name]()}
     </I>
   );
