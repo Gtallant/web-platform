@@ -1,9 +1,21 @@
 import React from 'react';
+import ICON_LIBRARY from './assets';
 import I from './icon.style';
+import { PropTypes } from 'prop-types';
+import { withTheme } from 'styled-components';
 
-function StoryContainer({name, scale}) {
+function Icon({name, scale, color, theme}) {
   return (
-    <I name={name} scale={scale} />
+    <I color={color} scale={scale}>
+      {ICON_LIBRARY[name]()}
+    </I>
   );
 }
-export default StoryContainer;
+
+Icon.propTypes = {
+  name: PropTypes.string,
+  scale: PropTypes.number,
+  color: PropTypes.string,
+} 
+
+export default withTheme(Icon);
