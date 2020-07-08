@@ -7,7 +7,7 @@ export default styled.i`
     width: ${props => props.scale}px;
 
     path {
-      fill: ${props => props.color}
+      fill: ${props => props.color ? props.color : props.theme.colors.on_background}
     }
   }
 `;

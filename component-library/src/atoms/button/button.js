@@ -1,8 +1,10 @@
 import React from 'react';
 import S from './button.style';
 import { PropTypes } from 'prop-types';
+import { withTheme } from 'styled-components';
+import Icon from '../icon/icon';
 
-function Button({ variant, elevation, children}) {
+function Button({ variant, elevation, icon, scale, theme, children}) {
     if (variant === 'text') {
         return (
             <S.text elevation={elevation} role="button">
@@ -17,6 +19,16 @@ function Button({ variant, elevation, children}) {
                 {children}
             </S.outline>
         );
+    }
+    if (icon) {
+      return (
+        <S.contained elevation={elevation} diameter={scale} role="button">
+            <S.background elevation={elevation} className='bkgd' />
+            <S.contents elevation={elevation} diameter={scale} className='contents'>
+              <Icon name={icon} scale={scale*.5} color={theme.colors.on_primary} />
+            </S.contents>
+        </S.contained>
+      );
     }
     return (
         <S.contained elevation={elevation} role="button">
@@ -43,4 +55,4 @@ Button.defaultProps = {
   children: null,
 };
 
-export default Button;
+export default withTheme(Button);

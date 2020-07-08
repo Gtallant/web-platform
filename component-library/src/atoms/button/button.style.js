@@ -9,6 +9,8 @@ const SHADOW_CONFIG = {
   maxOpacity: .15,
 };
 
+const circleStyles = diameter => `width: ${diameter}px; height: ${diameter}px;`;
+
 const shared = styled.div `
     font-family: Roboto, Arial, Sans;
     font-weight: 400;
@@ -20,8 +22,8 @@ const shared = styled.div `
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    padding: 4px 8px;
-    border-radius: 4px;
+    ${props => props.diameter ? circleStyles(props.diameter) : 'padding: 4px 8px;'}
+    border-radius: ${props => props.diameter ? props.diameter/2 : 4}px;
     transition: all .2s ease-in-out;
     ${props => createShadow(props.elevation, SHADOW_CONFIG)}
 
@@ -48,6 +50,7 @@ const contents = styled.span `
     justify-content: center;
     align-items: center;
     position: relative;
+    ${props => props.diameter ? circleStyles(props.diameter) : ''}
     z-index: ${props => props.elevation + 1};
 `;
 
