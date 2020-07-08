@@ -12,12 +12,13 @@ const container = styled.div`
       const bp = breakpoints[i];
       styles = `${styles}
         @media (min-width: ${bp.max}px) { 
-          margin: ${bp.gutterSize}px ${props.fullbleed ? 0 : bp.marginSize}px;
+          padding: ${bp.gutterSize}px ${props.fullbleed ? 0 : bp.marginSize}px;
         }
       `;
     }
     return styles;
   }}
+  ${props => props.background ? `background-color: ${props.background}` : ''}
 `;
 
 const contents = styled.div`

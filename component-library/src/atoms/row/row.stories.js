@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Surface from '../surface/surface';
-import { withKnobs, number, select, boolean } from "@storybook/addon-knobs";
+import { withKnobs, number, select, boolean, color } from "@storybook/addon-knobs";
 import Row from './row';
 import Column from '../column/column';
 
@@ -23,22 +23,25 @@ const ALIGN_OPTIONS = [
 ];
 
 export const basic = () => {
-  const numCol = number("Column Count", 1);
-  let columns = [...new Array(numCol)];
-  console.log(columns);
+  const knobs = {
+    background: color('Color', undefined, 'Row Properties'),
+    height: number("Height", 100, {min: 0, max: 999}, 'Row Content'),
+    align: select("Alignment", ALIGN_OPTIONS, 'center', 'Row Properties'),
+    fullbleed: boolean('Full Bleed', false, 'Row Properties'),
+    numCol: number("Column Count", 1, {min: 0, max: 8}, 'Row Content'),
+  }
+  let columns = [...new Array(knobs.numCol)];
   const col = columns.map(ele => {
-    console.log(ele);
     return (
       <Column key={ele}>
         <Surface>
-          <Content height={number("Height", 100)}>&nbsp;</Content>
+          <Content height={knobs.height}>&nbsp;</Content>
         </Surface>
       </Column>
     );
   });
-  console.log(col)
   return (
-    <Row align={select("Alignment", ALIGN_OPTIONS, 'center')} fullbleed={boolean('Full Bleed', false)}>
+    <Row background={knobs.background} align={knobs.align} fullbleed={knobs.fullbleed}>
       {col}
     </Row>
   );

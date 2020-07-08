@@ -6,7 +6,6 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh - 32px);
-  width: calc(100vw - 64px);
-  padding: 16px 32px;
+  width: calc(100vw);
   background: ${props => props.theme.colors.background}
 `;
