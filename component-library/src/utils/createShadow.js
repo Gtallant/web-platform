@@ -1,4 +1,11 @@
-export default function createShadow(elevation, { hOffset, vOffset, amplitude, blurOffset, maxOpacity } = { hOffset: 0, vOffset: 5, amplitude: 2, blurOffset: -3, maxOpacity: .33}) {
+export default function createShadow(elevation, config = {}) {
+  const {
+    hOffset = 0,
+    vOffset = 5,
+    amplitude = 2,
+    blurOffset = -3,
+    maxOpacity = .33
+  } = config;
   if(elevation == 0) {
     return '';
   }
