@@ -4,11 +4,14 @@ import { PropTypes } from 'prop-types';
 
 function AppBar({ color, fontColor, elevation, className, children}) {
   return (
-    <S.container className={`${className} app_bar`} color={color} elevation={elevation}>
+    <div>
+      <S.container className={`${className} app_bar`} color={color} elevation={elevation}>
         <S.contents fontColor={fontColor} fullbleed>
           {children}
         </S.contents>
-    </S.container>
+      </S.container>
+      <S.spacer />
+    </div>
   );
 }
 

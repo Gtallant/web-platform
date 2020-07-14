@@ -6,12 +6,22 @@ import createShadow from './../../utils/createShadow';
 
 const container = styled(Surface)`
   background: ${props => props.color ? props.color : props.theme.colors.primary};
-  ${props => props.height ? `height: ${props.height}px;` : computeResponsiveStyles(props.theme.breakpoints, bp => `height: ${bp.appBar.height}px;`)}
+  ${props => props.height ?
+    `height: ${props.height}px; margin-bottom: ${props.height}px;` :
+    computeResponsiveStyles(props.theme.breakpoints, bp => `height: ${bp.appBar.height}px; margin-bottom: ${bp.appBar.height}px;`)
+  }
   ${props => createShadow(props.elevation, { vOffset: 3 })}
   position: fixed;
   width: 100vw;
   top: 0;
   left: 0;
+`;
+
+const spacer = styled.div`
+  ${props => props.height ?
+    `height: ${props.height}px;` :
+    computeResponsiveStyles(props.theme.breakpoints, bp => `height: ${bp.appBar.height}px;`)
+  }
 `;
 
 const contents = styled(Row)`
@@ -46,4 +56,5 @@ const contents = styled(Row)`
 export default {
   container: container,
   contents: contents,
+  spacer: spacer,
 }

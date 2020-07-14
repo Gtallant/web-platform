@@ -4,17 +4,17 @@ import { PropTypes } from 'prop-types';
 import { withTheme } from 'styled-components';
 import Icon from '../icon/icon';
 
-function Button({ variant, elevation, icon, scale, theme, className, children}) {
+function Button({ onClick, variant, elevation, icon, scale, theme, className, children}) {
     if (variant === 'text') {
         return (
-            <S.text className={`${className} button`} elevation={elevation} role="button">
+            <S.text onClick={() => onClick()} className={`${className} button`} elevation={elevation} role="button">
                 <S.background className='bkgd' />
                 {children}
             </S.text>
         );
     } else if (variant === 'outline') {
         return (
-            <S.outline className={`${className} button`} elevation={elevation} role="button">
+            <S.outline onClick={() => onClick()} className={`${className} button`} elevation={elevation} role="button">
                 <S.background className='bkgd' />
                 {children}
             </S.outline>
@@ -22,7 +22,7 @@ function Button({ variant, elevation, icon, scale, theme, className, children}) 
     }
     if (icon) {
       return (
-        <S.contained className={`${className} button`} elevation={elevation} diameter={scale} role="button">
+        <S.contained onClick={() => onClick()} className={`${className} button`} elevation={elevation} diameter={scale} role="button">
             <S.background elevation={elevation} className='bkgd' />
             <S.contents elevation={elevation} diameter={scale} className='contents'>
               <Icon name={icon} scale={scale*.5} color={theme.colors.on_primary} />
@@ -31,7 +31,7 @@ function Button({ variant, elevation, icon, scale, theme, className, children}) 
       );
     }
     return (
-        <S.contained className={`${className} button`} elevation={elevation} role="button">
+        <S.contained onClick={() => onClick()} className={`${className} button`} elevation={elevation} role="button">
             <S.background elevation={elevation} className='bkgd' />
             <S.contents elevation={elevation} className='contents'>
               {children}
