@@ -28,6 +28,11 @@ module.exports = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       },
-    ]
+    ],
+  },
+  resolve: {
+    alias: {
+      react: path.resolve('./node_modules/react')
+    }
   }
 }

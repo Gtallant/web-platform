@@ -9,6 +9,7 @@ import Subtitle from './atoms/subtitle/subtitle';
 import Surface from './atoms/surface/surface';
 import Card from './molecules/card/card';
 import ThemeProvider from './molecules/themeProvider/themeProvider';
+import AppBar from './molecules/appBar/appBar';
 
 export {
   Body,
@@ -21,4 +22,5 @@ export {
   Surface,
   Card,
   ThemeProvider,
+  AppBar,
 }

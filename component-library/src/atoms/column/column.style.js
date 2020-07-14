@@ -12,7 +12,7 @@ const getAlignmentCSS = align => {
 const getResponsiveWidths = (theme, width) => computeResponsiveStyles(theme, bp => {
   let styles = '';
   if (typeof width === 'number') {
-    styles = `width: calc(${Math.min(width*100/bp.numCol, 100)}`;
+    styles = `width: calc(${Math.min(width*100/bp.numCol, 100)}% - ${bp.marginSize}px);`;
   }
   if (width === 'grow') {
     styles = `flex-basis: calc(${Math.min(100/bp.numCol, 100)}}% - ${bp.marginSize}px); margin: 0 ${bp.marginSize / 2}px;`;
