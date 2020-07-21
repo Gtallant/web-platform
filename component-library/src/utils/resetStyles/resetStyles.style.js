@@ -626,13 +626,13 @@ export default createGlobalStyle `
 
   blockquote {
     border-left: 2px solid rgba(0, 0, 0, 0.8);
-    font-family: Georgia, Times, "Times New Roman", serif;
+    font-family: inherit;
     font-style: italic;
     margin: 16px 0;
     padding-left: 16px; }
 
   figcaption {
-    font-family: Georgia, Times, "Times New Roman", serif; }
+    font-family: inherit }
 
   u {
     text-decoration: underline; }
@@ -651,117 +651,49 @@ export default createGlobalStyle `
   mark {
     background: #ffeb3b; }
 
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="url"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="week"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  select,
-  textarea {
-    background: #fff;
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    select,
+    textarea {
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    color: rgba(0, 0, 0, 0.8);
+    border: none;
     display: block;
     width: 100%;
-    font-size: 1rem;
-    padding: 8px 16px;
-    line-height: 1.5;
-    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
   input[type="color"] {
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    border: none;
     display: inline-block;
     vertical-align: middle; }
 
   input:not([type]) {
-    -webkit-appearance: none;
-    background: #fff;
+    border: none;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    color: rgba(0, 0, 0, 0.8);
     display: block;
     width: 100%;
-    padding: 8px 16px;
-    line-height: 1.5;
-    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     text-align: left; }
 
-  input[type="text"]:focus,
-  input[type="password"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="week"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="tel"]:focus,
-  input[type="color"]:focus,
+  input:focus,
   select:focus,
   textarea:focus {
-    background-color: #fff;
-    border-color: #80bdff;
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
-  input:not([type]):focus {
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-
-  input[type="file"]:focus,
-  input[type="radio"]:focus,
-  input[type="checkbox"]:focus {
-    outline: 1px thin rgba(0, 0, 0, 0.12); }
-
-  input[type="text"][disabled],
-  input[type="password"][disabled],
-  input[type="email"][disabled],
-  input[type="url"][disabled],
-  input[type="date"][disabled],
-  input[type="month"][disabled],
-  input[type="time"][disabled],
-  input[type="datetime"][disabled],
-  input[type="datetime-local"][disabled],
-  input[type="week"][disabled],
-  input[type="number"][disabled],
-  input[type="search"][disabled],
-  input[type="tel"][disabled],
-  input[type="color"][disabled],
+  input[disabled],
   select[disabled],
   textarea[disabled] {
-    background-color: rgba(0, 0, 0, 0.12);
-    color: rgba(0, 0, 0, 0.54);
-    cursor: not-allowed;
-    opacity: 1; }
-
-  input:not([type])[disabled] {
     background-color: rgba(0, 0, 0, 0.12);
     color: rgba(0, 0, 0, 0.54);
     cursor: not-allowed;
@@ -772,12 +704,6 @@ export default createGlobalStyle `
   textarea[readonly] {
     border-color: rgba(0, 0, 0, 0.12);
     color: rgba(0, 0, 0, 0.54); }
-
-  input:focus:invalid,
-  textarea:focus:invalid,
-  select:focus:invalid {
-    border-color: #ea1c0d;
-    color: #f44336; }
 
   input[type="file"]:focus:invalid:focus,
   input[type="radio"]:focus:invalid:focus,
@@ -844,10 +770,6 @@ export default createGlobalStyle `
     border: 1px solid transparent;
     font-size: 1rem;
     line-height: 1.5;
-    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out; }
 
   input[type=submit]::-moz-focus-inner,
   input[type=reset]::-moz-focus-inner,

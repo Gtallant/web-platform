@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import S from './column.style';
 
 function Column({width, align, className, children}) {
-  console.log(align);
   return (
-    <S className={`${className} column ${align ? `column--${align}` : ''}`} width={width} align={align}>
+    <S className={`${className ? className : ''} column ${align ? `column--${align}` : ''}`} width={width} align={align}>
       {children}
     </S>
   );

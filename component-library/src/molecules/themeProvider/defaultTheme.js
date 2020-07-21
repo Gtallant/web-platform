@@ -67,5 +67,16 @@ export default {
     cardProperties: {
       corner: 4,
       padding: gutterSize => Math.max(gutterSize * .75, 8),
+    },
+    inputProperties: {
+      padding: {
+        top: 18,
+        bottom: 12,
+        sides: 12,
+      },
+      fontSize: 16,
+    },
+    animationDefaults: {
+      duration: .2,
     }
 };
