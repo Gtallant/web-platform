@@ -7,7 +7,6 @@ import ResetStyles from '../../utils/resetStyles/resetStyles';
 import GlobalStyles from '../../utils/globalStyles/globalStyles';
 
 function Provider({theme, children}) {
-    console.log('Rendering ThemeProvider...');
     return (
         <ThemeProvider theme={theme}>
             <ResetStyles />

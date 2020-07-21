@@ -6,6 +6,6 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh - 32px);
-  width: calc(100vw);
+  max-width: 100%;
   background: ${props => props.theme.colors.background}
 `;

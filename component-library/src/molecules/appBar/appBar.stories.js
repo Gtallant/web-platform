@@ -12,8 +12,6 @@ export default {
   decorators: [withKnobs]
 };
 
-console.log(defaultTheme.colors);
-
 export const basic = () => (
   <AppBar color={select('Color', Object.values(defaultTheme.colors))}>
     <Headline level={1}>App Bar</Headline>
