@@ -10,7 +10,7 @@ export default styled.label`
   transition: all ${props => props.animationDuration ? props.animationDuration : props.theme.animationDefaults.duration}s ease-in-out;
 
   &.focus {
-    top: ${props => props.theme.inputProperties.padding.top - props.fontSize ? props.fontSize * .6 : props.theme.inputProperties.fontSize / 2}px;
+    top: ${props => props.theme.inputProperties.padding.top - props.fontSize ? props.fontSize * .3 : props.theme.inputProperties.fontSize * .3}px;
     font-size: ${props => props.fontSize ? props.fontSize / 2 : props.theme.inputProperties.fontSize * .6}px;
     font-weight: 500;
     ${props => {

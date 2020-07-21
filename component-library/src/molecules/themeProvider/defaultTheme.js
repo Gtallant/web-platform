@@ -70,8 +70,8 @@ export default {
     },
     inputProperties: {
       padding: {
-        top: 20,
-        bottom: 16,
+        top: 18,
+        bottom: 12,
         sides: 12,
       },
       fontSize: 16,

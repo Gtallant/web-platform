@@ -1,7 +1,7 @@
 import React from 'react';
 import S from './inputField.style';
 
-function InputField({ textColor, accentColor, name, id, onFocus, onBlur, onChange, className}) {
+function InputField({ textColor, accentColor, name, id, type, onFocus, onBlur, onChange, className}) {
   if (id) {
     return (<S
       id={id}
@@ -9,7 +9,7 @@ function InputField({ textColor, accentColor, name, id, onFocus, onBlur, onChang
       onChange={e => onChange(e.target.value)}
       onFocus={() => onFocus()}
       onBlur={() => onBlur()}
-      type="text"  
+      type={type ? type : ''}  
       className={`${className} input__field`}
       color={textColor} accent={accentColor}
     />);
@@ -19,7 +19,7 @@ function InputField({ textColor, accentColor, name, id, onFocus, onBlur, onChang
     onChange={e => onChange(e.target.value)}
     onFocus={() => onFocus()}
     onBlur={() => onBlur()}
-    type="text"  
+    type={type ? type : ''}  
     className={`${className} input__field`}
     color={textColor} accent={accentColor}
   />);
