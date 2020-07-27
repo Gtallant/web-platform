@@ -10,6 +10,7 @@ import Surface from './atoms/surface/surface';
 import Card from './molecules/card/card';
 import ThemeProvider from './molecules/themeProvider/themeProvider';
 import AppBar from './molecules/appBar/appBar';
+import Input from './molecules/input/input';
 
 export {
   Body,
@@ -23,4 +24,5 @@ export {
   Card,
   ThemeProvider,
   AppBar,
+  Input,
 }

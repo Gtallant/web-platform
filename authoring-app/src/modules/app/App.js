@@ -4,8 +4,8 @@ import { ThemeProvider, AppBar, Headline, Row, Column } from 'component-library'
 import Login from '../login/Login';
 
 function App() {
-  const auth = useSelector(state => state.auth)
-  console.log(auth);
+  const { token } = useSelector(state => state.auth);
+  console.log(token);
   let pageContents = '';
   return (
     <ThemeProvider>
@@ -14,7 +14,7 @@ function App() {
       </AppBar>
       <Row align="center">
         {
-          auth ? (
+          token ? (
             <Column width={4}>
               <Headline>Test</Headline>
             </Column>

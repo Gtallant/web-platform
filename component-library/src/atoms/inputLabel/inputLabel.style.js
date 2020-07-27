@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export default styled.label`
   ${props => props.textColor ? `color: ${props.textColor};` : ''}
   position: absolute;
+  pointer-events: none;
   line-height: normal;
   top: ${props => props.theme.inputProperties.padding.top}px;
   left: ${props => props.theme.inputProperties.padding.sides}px;
