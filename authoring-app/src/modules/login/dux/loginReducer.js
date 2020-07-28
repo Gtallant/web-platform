@@ -1,18 +1,21 @@
-import { TEST_ACTION, LOGIN } from './loginActionTypes';
+import { LOGOUT, LOGIN } from './loginActionTypes';
+
+export const initialState = {
+  token: false,
+  error: false,
+}
 
 export default (state = {}, action = {}) => {
-  switch (action.type) {
-    case TEST_ACTION:
-      console.log(action.payload);
-      return {
-        ...state,
-      }
+  const { type, payload } = action;
+  switch (type) {
     case LOGIN:
       return {
         ...state,
-        auth: {
-          ...action.payload,
-        }
+        ...payload,
+      };
+    case LOGOUT:
+      return {
+        ...initialState,
       };
     default:
       return state;

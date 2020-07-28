@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, select, color, number } from "@storybook/addon-knobs";
+import { withKnobs, select, text, number } from "@storybook/addon-knobs";
 import Input from './input';
 import defaultTheme from '../themeProvider/defaultTheme';
 import Row from '../../atoms/row/row';
@@ -36,6 +36,22 @@ export const password = () => {
     <Row align="center">
       <Column textColor={knobs.color} accentColor={knobs.accent}  width={knobs.colSpan}>
         <Input textColor={knobs.color} accentColor={knobs.accent} name="Password" id="password-id" type="password" />
+      </Column>
+    </Row>
+  );
+};
+
+export const errors = () => {
+  const knobs = {
+    color: select('Text Color', Object.values(defaultTheme.colors), defaultTheme.colors.on_background),
+    accent: select('Accent Color', Object.values(defaultTheme.colors, defaultTheme.colors.primary)),
+    colSpan: number('Column Span', 4),
+    errorMessage: text('Error Message', 'Invalid Input')
+  }
+  return (
+    <Row align="center">
+      <Column textColor={knobs.color} accentColor={knobs.accent}  width={knobs.colSpan}>
+        <Input textColor={knobs.color} accentColor={knobs.accent} name="Password" id="password-id" errorMsg={knobs.errorMessage} />
       </Column>
     </Row>
   );
