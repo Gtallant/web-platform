@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 const container = styled.div`
   position: relative;
-  border-bottom: 1px solid ${props => props.textColor ? props.textColor : props.theme.colors.onPrimary}77;
+  margin-top: ${props => (props.fontSize ? props.fontSize: props.theme.inputProperties.fontSize) + props.theme.inputProperties.padding.bottom * .75 + props.theme.inputProperties.padding.top}px;
   margin-bottom: ${props => props.theme.inputProperties.padding.bottom}px;
 
-  &.focus {
-    border-bottom: 2px solid ${props => props.accentColor ? props.accentColor : props.theme.colors.primary};
+  .body {
+    padding-left: ${props => props.theme.inputProperties.padding.sides}px;
+    color: ${props => props.theme.colors.error};
   }
 `;
 
