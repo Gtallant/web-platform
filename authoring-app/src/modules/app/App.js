@@ -5,8 +5,6 @@ import Login from '../login/Login';
 
 function App() {
   const { token } = useSelector(state => state.auth);
-  console.log(token);
-  let pageContents = '';
   return (
     <ThemeProvider>
       <AppBar color={'#C7C7D3'} fontColor={'#000'} elevation={2}>

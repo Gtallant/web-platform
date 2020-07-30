@@ -36,7 +36,12 @@ app.post('/login', (req, res) => {
   }
 });
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const context = exp => ({
+  req: exp.Request,
+  res: exp.Response
+});
+
+const server = new ApolloServer({ typeDefs, resolvers, context });
 
 server.applyMiddleware({ app });
 
