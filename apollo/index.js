@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 
 import typeDefs from './schema/schema';
 import resolvers from './schema/resolvers';
