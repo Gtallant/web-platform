@@ -6,7 +6,10 @@ export const Page = mongoose.model('pages', mongoose.Schema({
   components: Array,
 }));
 
-export const componentModel = mongoose.model('components', mongoose.Schema({
+export const Component = mongoose.model('components', mongoose.Schema({
   title: String,
-  data: String,
+  type: String,
+  props: String,
+  children: Array,
+  content: String,
 }));
