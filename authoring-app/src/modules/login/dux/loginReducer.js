@@ -1,7 +1,7 @@
 import { LOGOUT, LOGIN } from './loginActionTypes';
 
 export const initialState = {
-  token: false,
+  token: true,
   error: false,
 }
 
